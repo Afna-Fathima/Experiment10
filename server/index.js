@@ -10,9 +10,36 @@ const app = express();
 console.log('JWT_SECRET:', process.env.JWT_SECRET ? 'LOADED' : 'MISSING');
 console.log('MONGODB_URI:', process.env.MONGODB_URI ? 'LOADED' : 'MISSING');
 console.log('ADMIN_SECRET:', process.env.ADMIN_SECRET ? 'LOADED' : 'MISSING');
+console.log('NODE_ENV:', process.env.NODE_ENV);
+
+// CORS Configuration for Render deployment
+const corsOptions = {
+  origin: function (origin, callback) {
+    const allowedOrigins = [
+      'http://localhost:5173',
+      'http://localhost:3000',
+      'http://localhost:5000',
+      'https://podcast-frontend.onrender.com',
+      // Add your actual Render frontend URL here
+      ...(process.env.FRONTEND_URL ? [process.env.FRONTEND_URL] : [])
+    ];
+    
+    // Allow requests with no origin (like mobile apps, curl requests)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.includes(origin) || process.env.NODE_ENV === 'development') {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
 
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.path}`);
