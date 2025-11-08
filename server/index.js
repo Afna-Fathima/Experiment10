@@ -59,6 +59,20 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/podcasts', require('./routes/products'));
 app.use('/api/users', require('./routes/users'));
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Podcast Backend API',
+    status: 'Server is running',
+    endpoints: {
+      health: '/api/health',
+      podcasts: '/api/podcasts',
+      auth: '/api/auth',
+      users: '/api/users'
+    }
+  });
+});
+
 // Test route
 app.get('/api/health', (req, res) => {
   res.json({ status: 'Server is running', timestamp: new Date() });
