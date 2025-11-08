@@ -20,6 +20,7 @@ const corsOptions = {
       'http://localhost:3000',
       'http://localhost:5000',
       'https://podcast-frontend.onrender.com',
+      'https://experiment10-1.onrender.com',
       // Add your actual Render frontend URL here
       ...(process.env.FRONTEND_URL ? [process.env.FRONTEND_URL] : [])
     ];
