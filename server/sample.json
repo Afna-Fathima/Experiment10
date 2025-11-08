@@ -1,0 +1,100 @@
+{
+  "podcasts": [
+    {
+      "id": "tomato-hour",
+      "title": "The Tomato Hour",
+      "description": "Fresh takes on gardening, recipes, and tomato folklore.",
+      "coverUrl": "https://via.placeholder.com/600x600.png?text=Tomato+Hour",
+      "episodes": [
+        {
+          "id": "t1",
+          "title": "Growing Tomatoes 101",
+          "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+          "duration": "12:34",
+          "publishedAt": "2024-10-01"
+        },
+        {
+          "id": "t2",
+          "title": "Heirloom vs Hybrid",
+          "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+          "duration": "09:12",
+          "publishedAt": "2024-11-12"
+        }
+      ]
+    },
+    {
+      "id": "onion-tales",
+      "title": "Onion Tales",
+      "description": "Layered stories from chefs and farmers.",
+      "coverUrl": "https://via.placeholder.com/600x600.png?text=Onion+Tales",
+      "episodes": [
+        {
+          "id": "o1",
+          "title": "Crying in the Kitchen",
+          "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+          "duration": "08:05",
+          "publishedAt": "2024-09-20"
+        },
+        {
+          "id": "o2",
+          "title": "Caramelizing Secrets",
+          "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+          "duration": "15:01",
+          "publishedAt": "2024-12-05"
+        }
+      ]
+    },
+    {
+      "id": "watermelon-waves",
+      "title": "Watermelon Waves",
+      "description": "Summery chat about fruits, festivals, and fun.",
+      "coverUrl": "https://via.placeholder.com/600x600.png?text=Watermelon+Waves",
+      "episodes": [
+        {
+          "id": "w1",
+          "title": "Seedless Myths",
+          "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
+          "duration": "11:22",
+          "publishedAt": "2025-01-03"
+        },
+        {
+          "id": "w2",
+          "title": "Pick the Perfect Ripe One",
+          "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3",
+          "duration": "07:30",
+          "publishedAt": "2025-02-10"
+        }
+      ]
+    },
+    {
+      "id": "daily-tech",
+      "title": "Daily Tech",
+      "description": "Short tech news and interviews.",
+      "coverUrl": "https://via.placeholder.com/600x600.png?text=Daily+Tech",
+      "episodes": [
+        {
+          "id": "d1",
+          "title": "AI This Week",
+          "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3",
+          "duration": "10:00",
+          "publishedAt": "2025-03-02"
+        }
+      ]
+    },
+    {
+      "id": "history-bites",
+      "title": "History Bites",
+      "description": "Snackable history tales.",
+      "coverUrl": "https://via.placeholder.com/600x600.png?text=History+Bites",
+      "episodes": [
+        {
+          "id": "h1",
+          "title": "The Tomato Revolution",
+          "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3",
+          "duration": "13:45",
+          "publishedAt": "2024-08-15"
+        }
+      ]
+    }
+  ]
+}

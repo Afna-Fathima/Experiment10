@@ -1,0 +1,307 @@
+/* Global Styles for Podcast Website */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --podcast-green: #1DB954;
+  --podcast-green-light: #1ed760;
+  --dark-bg: #191414;
+  --dark-secondary: #282828;
+  --dark-tertiary: #404040;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container Styles */
+.container, .container-fluid {
+  position: relative;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--podcast-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--podcast-green-light);
+}
+
+/* Button Styles */
+.btn {
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(29, 185, 84, 0.25);
+}
+
+.btn-primary {
+  background-color: var(--podcast-green);
+  border-color: var(--podcast-green);
+}
+
+.btn-primary:hover {
+  background-color: var(--podcast-green-light);
+  border-color: var(--podcast-green-light);
+}
+
+.btn-outline-primary {
+  color: var(--podcast-green);
+  border-color: var(--podcast-green);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--podcast-green);
+  border-color: var(--podcast-green);
+}
+
+/* Form Styles */
+.form-control,
+.form-select {
+  background-color: var(--dark-secondary);
+  border-color: var(--dark-tertiary);
+  color: var(--text-primary);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--dark-tertiary);
+  border-color: var(--podcast-green);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 0.2rem rgba(29, 185, 84, 0.25);
+}
+
+.form-control::placeholder {
+  color: var(--text-secondary);
+}
+
+.form-label {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--dark-secondary);
+  border-color: var(--dark-tertiary);
+  color: var(--text-primary);
+}
+
+.card-header {
+  background-color: var(--dark-tertiary);
+  border-color: var(--dark-tertiary);
+}
+
+/* Alert Styles */
+.alert {
+  border-radius: 12px;
+}
+
+.alert-success {
+  background-color: rgba(29, 185, 84, 0.15);
+  border-color: var(--podcast-green);
+  color: var(--podcast-green-light);
+}
+
+.alert-danger {
+  background-color: rgba(220, 38, 38, 0.15);
+  border-color: #dc2626;
+  color: #fecaca;
+}
+
+.alert-warning {
+  background-color: rgba(245, 158, 11, 0.15);
+  border-color: #f59e0b;
+  color: #fcd34d;
+}
+
+.alert-info {
+  background-color: rgba(59, 130, 246, 0.15);
+  border-color: #3b82f6;
+  color: #93c5fd;
+}
+
+/* Table Styles */
+.table {
+  color: var(--text-primary);
+}
+
+.table-dark {
+  background-color: var(--dark-secondary);
+}
+
+.table-dark thead th {
+  border-color: var(--dark-tertiary);
+  background-color: var(--dark-tertiary);
+  font-weight: 700;
+  color: var(--podcast-green);
+}
+
+.table-dark tbody + tbody {
+  border-color: var(--dark-tertiary);
+}
+
+.table-dark td {
+  border-color: var(--dark-tertiary);
+}
+
+/* Badge Styles */
+.badge {
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+}
+
+.badge.bg-success {
+  background-color: var(--podcast-green) !important;
+}
+
+.badge.bg-danger {
+  background-color: #dc2626 !important;
+}
+
+.badge.bg-warning {
+  background-color: #f59e0b !important;
+}
+
+/* Modal Styles */
+.modal-content {
+  background-color: var(--dark-secondary);
+  border-color: var(--dark-tertiary);
+}
+
+.modal-header {
+  background-color: var(--dark-tertiary);
+  border-color: var(--dark-tertiary);
+}
+
+.modal-title {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.close {
+  color: var(--text-primary);
+}
+
+/* Input Group */
+.input-group-text {
+  background-color: var(--dark-secondary);
+  border-color: var(--dark-tertiary);
+  color: var(--text-secondary);
+}
+
+/* Navigation */
+.nav-link {
+  color: var(--text-secondary) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--podcast-green) !important;
+}
+
+/* Utility Classes */
+.bg-dark-podcast {
+  background-color: var(--dark-bg);
+}
+
+.bg-secondary-podcast {
+  background-color: var(--dark-secondary);
+}
+
+.text-muted-podcast {
+  color: var(--text-secondary);
+}
+
+.border-podcast {
+  border-color: var(--dark-tertiary) !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+
