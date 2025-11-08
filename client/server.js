@@ -7,13 +7,14 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const distPath = path.join(__dirname, 'dist');
 
 // Serve static files from dist directory
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(distPath));
 
 // Handle client-side routing - serve index.html for all routes
-app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+app.use((req, res) => {
+  res.sendFile(path.join(distPath, 'index.html'));
 });
 
 app.listen(PORT, () => {
