@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: podcast-backend
+    runtime: node
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: ADMIN_SECRET
+        sync: false
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+
+  - type: static
+    name: podcast-frontend
+    staticPublishPath: /dist
+    buildCommand: cd client && npm install && npm run build
+    envVars:
+      - key: VITE_API_URL
+        sync: false
